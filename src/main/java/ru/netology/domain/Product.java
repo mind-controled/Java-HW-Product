@@ -11,4 +11,8 @@ public class Product {
     private int id;
     private int price;
     private String name;
+
+    public boolean matches(String search) {
+        return this.getName().matches(search);
+    }
 }
