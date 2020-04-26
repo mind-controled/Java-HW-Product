@@ -22,19 +22,14 @@ public class ProductManager {
             if (book.getName().equalsIgnoreCase(search)) {
                 return true;
             }
-            if (book.getAuthor().equalsIgnoreCase(search)) {
-                return true;
-            }
-            return false;
+            return book.getAuthor().equalsIgnoreCase(search);
         }
         if (product instanceof Smartphone) {
             Smartphone smart = (Smartphone) product;
             if (smart.getName().equalsIgnoreCase(search)) {
                 return true;
             }
-            if (smart.getManufacturer().equalsIgnoreCase(search)) {
-                return true;
-            }
+            return smart.getManufacturer().equalsIgnoreCase(search);
         }
         return false;
     }

@@ -1,17 +1,9 @@
 package ru.netology.repository;
 
-import ru.netology.domain.Book;
 import ru.netology.domain.Product;
-import ru.netology.domain.Smartphone;
 
 public class ProductRepository {
-    Product[] items = {new Book(1, 100, "Fight Club", "Chuck Palahniuk"),
-            new Book(2, 200, "Requiem For A Dream", "Hubert Selby Jr."),
-            new Book(3, 300, "Fear & Loathing In Las Vegas", "Hunter Stockton Thompson"),
-            new Smartphone(4, 1000, "Galaxy S10", "Samsung"),
-            new Smartphone(5, 2000, "Mi Note 10", "Xiaomi"),
-            new Smartphone(6, 3000, "iPhone 11", "Apple")
-    };
+    private Product[] items = new Product[0];
 
     public void save(Product item) {
         int length = items.length + 1;
